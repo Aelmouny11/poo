@@ -2,19 +2,37 @@
 // #include <conio>
 using namespace std;
 
-class Point{
-    private: int x, y;
+class Point
+{
+private:
+    int x, y;
 };
-class MyClass {        // The class
-  public:              // Access specifier
-    void myMethod() {  // Method/function defined inside the class
-      cout << "runnig inside my MyClass Instance";
+class Car
+{                 // The class
+public:           // Access specifier
+    string brand; // Attribute
+    string model; // Attribute
+    int year;     // Attribute
+    Car(string x, string y, int z)
+    { // Constructor with parameters
+        brand = x;
+        model = y;
+        year = z;
+    }
+
+public:
+    void display()
+    {
+        cout << "[" << brand << "," << model << "," << year << "]";
     }
 };
 
-int main(){
-    cout << "Hello\n";
-    MyClass myClass;
-    myClass.myMethod();
+int main()
+{
+    Car Bmw(
+        "BMW",
+        "X5",
+        1999);
+    Bmw.display();
     return 0;
 }
