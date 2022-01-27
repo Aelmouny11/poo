@@ -1,38 +1,22 @@
 #include <iostream>
-// #include <conio>
 using namespace std;
+class Personne{
+    private:
+    string CIN,Nom,Prenom;
+    public:
+    void initialize(string ci,string No,string Pr){
+        CIN = ci;
+        Nom=No;
+        Prenom=Pr;
 
-class Point
-{
-private:
-    int x, y;
-};
-class Car
-{                 // The class
-public:           // Access specifier
-    string brand; // Attribute
-    string model; // Attribute
-    int year;     // Attribute
-    Car(string x, string y, int z)
-    { // Constructor with parameters
-        brand = x;
-        model = y;
-        year = z;
+    }
+    void affiche(){
+        cout<<"["<<CIN<<","<<Nom<<","<<Prenom<<"]"<<endl;
     }
 
-public:
-    void display()
-    {
-        cout << "[" << brand << "," << model << "," << year << "]";
-    }
 };
-
-int main()
-{
-    Car Bmw(
-        "BMW",
-        "X5",
-        1999);
-    Bmw.display();
-    return 0;
+int main(){
+    // int B;
+    Personne A;
+    A.affiche();
 }
